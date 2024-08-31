@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #0d0d0d;
+    color: #ffffff;
+}
+
+.container {
+    text-align: center;
+    background: linear-gradient(145deg, #1e1e1e, #292929);
+    padding: 10px 30px 10px 30px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 20px #141414, -10px -10px 20px #323232;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    color: #8a2be2; 
+    text-shadow: 2px 2px 8px rgba(138, 43, 226, 0.5);
+}
+
+.m button,
+#reset {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+    background: #1e1e1e;
+    border: none;
+    color: #8a2be2;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px #141414, -5px -5px 10px #323232;
+    transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+.m button:hover,
+#reset:hover {
+    background: #8a2be2; 
+    color: #ffffff;
+    box-shadow: 5px 5px 15px #8a2be2, -5px -5px 15px #8a2be2;
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-gap: 5px;
+    margin: 20px auto;
+    background: #141414;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 20px #0d0d0d, -10px -10px 20px #1e1e1e;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: #1e1e1e;
+    border: 2px solid #8a2be2; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+    border-radius: 5px;
+    box-shadow: inset 5px 5px 10px #141414, inset -5px -5px 10px #323232;
+}
+
+.cell:hover {
+    background-color: #8a2be255;
+    transform: scale(1.05);
+    box-shadow: inset 5px 5px 10px #8a2be2b7, inset -5px -5px 10px #8a2be2ba;
+}
+
+.cell:active {
+    transform: scale(0.95);
+}
+
+.status {
+    margin: 10px 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: #8a2be2; 
+}
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .game-board {
+        grid-gap: 3px; 
+    }
+
+    .m button,
+    #reset {
+        padding: 8px 16px; 
+        font-size: 14px; 
+    }
+    
+}
+
